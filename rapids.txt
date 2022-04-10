@@ -1,0 +1,71 @@
+Garrett Cooper
+1B
+75
+.284
+.992
+
+Anthony Rizzo
+1B
+81
+.248
+.995
+
+Marcus Semien
+2B
+87
+.265
+.985
+
+Yandy Diaz
+3B
+72
+.256
+.990
+
+Corey Seager
+SS
+82
+.306
+.975
+
+Willy Adames
+SS
+80
+.285
+.970
+
+Tom Murphy
+C
+73
+.202
+.990
+
+Joey Bart
+C
+70
+.333
+1.000
+
+Kris Bryant
+LF
+81
+.265
+.966
+
+Luis Robert
+CF
+90
+.338
+.976
+
+Kike Hernandez
+CF
+86
+.250
+.985
+
+Alex Dickerson
+RF
+72
+.233
+.982
