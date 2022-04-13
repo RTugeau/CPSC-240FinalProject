@@ -3,67 +3,56 @@ Bobby Dalbec
 76
 .240
 .977
-
 Joey Votto
 1B
 85
 .266
 .993
-
 Kolten Wong
 2B
 83
 .272
 .995
-
 Jonathan India
 2B
 75
 .269
 .976
-
 Yoan Moncada
 3B
 74
 .263
 .953
-
 Wander Franco
 SS
 84
 .288
 .929
-
 Danny Jansen
 C
 76
 .223
 .996
-
 Jesse Winker
 LF
 81
 .305
 .994
-
 David Peralta
 LF
 73
 .259
 .989
-
 Byron Buxton
 CF
 89
 .306
 .994
-
 Mitch Haniger
 RF
 81
 .253
 .989
-
 Kyle Tucker
 RF
 89

@@ -3,67 +3,56 @@ Max Muncy
 89
 .249
 .996
-
 Jake Cronenworth
 2B
 85
 .266
 .986
-
 Mike Moustakas
 3B
 78
 .208
 .983
-
 Javier Baez
 SS
 84
 .265
 .961
-
 Roberto Perez
 C
 74
 .149
 .995
-
 Jacob Stallings
 C
 79
 .246
 .998
-
 Christian Yelich
 LF
 74
 .248
 .994
-
 Austin Hays
 LF
 81
 .256
 .996
-
 Cedric Mullins
 CF
 86
 .291
 .985
-
 Matt Vierling
 CF
 65
 .324
 1.000
-
 Max Kepler
 RF
 77
 .211
 1.000
-
 Mark Canha
 RF
 75
