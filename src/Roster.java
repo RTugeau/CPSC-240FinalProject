@@ -1,7 +1,6 @@
 package src.src;
 import java.util.ArrayList;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 public class Roster {
@@ -26,5 +25,12 @@ public class Roster {
          System.out.println(p.getName());
       }
    }
-
+   public int getOverall() {
+      int sum = 0;
+      for (Player s:roster) {
+         sum = sum+s.getPlayerRating();
+      }
+      int teamOverall = sum/(roster.size());
+      return(teamOverall);
+   }
 }

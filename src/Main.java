@@ -10,6 +10,6 @@ public class Main {
         Roster roster6 = new Roster("legends.txt");
         Roster roster7 = new Roster("rapids.txt");
         Roster roster8 = new Roster("wolves.txt");
-
+        System.out.println(roster1.getOverall());
     }
 }
