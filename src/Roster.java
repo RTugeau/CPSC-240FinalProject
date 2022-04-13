@@ -14,16 +14,13 @@ public class Roster {
          System.out.println("File not found");
          System.exit(0);
       }
-      int count=0;
       while (scnr.hasNextLine()) {
-         count++;
          String playerName = scnr.nextLine();
          String position = scnr.nextLine();
          int playerRating = Integer.parseInt(scnr.nextLine());
          double battingAvg = Double.parseDouble(scnr.nextLine());
          double fieldingPct = Double.parseDouble(scnr.nextLine());
          roster.add(new Player(playerName, position, playerRating, battingAvg, fieldingPct));
-         if (scnr.hasNextLine());
       }
       for (Player p:roster) {
          System.out.println(p.getName());
