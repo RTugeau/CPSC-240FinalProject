@@ -3,9 +3,13 @@ import java.util.ArrayList;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.Random;
+import java.lang.Math;
 public class Roster {
    private ArrayList<Player> roster = new ArrayList<>();
-   public Roster (String fileName) {
+   private String teamName;
+   public Roster (String fileName, String teamName) {
+      this.teamName = teamName;
       Scanner scnr = new Scanner(System.in);
       try {
          scnr = new Scanner (new File(fileName));
@@ -32,5 +36,39 @@ public class Roster {
       }
       int teamOverall = sum/(roster.size());
       return(teamOverall);
+   }
+
+   public String gameSim(Roster r) {
+      Random rng = new Random();
+      double rand = 0;
+      if(r.getOverall() <= 78) {
+         rand = rng.nextDouble(.350, .450);
+      } else if(r.getOverall() > 78 && r.getOverall() <= 80) {
+         rand = rng.nextDouble(.450, .550);
+      } else {
+         rand = rng.nextDouble(.550, .650);
+      }
+      double gsim = rng.nextDouble();
+      if(gsim >= rand) {
+         return ("The " + r.teamName + " Lost the game.");
+      } else {
+         return ("The " + r.teamName + " Won the game.");
+      }
+   }
+
+   public String seasonSim(Roster r) {
+      Random rng = new Random();
+      double rand = 0;
+      if(r.getOverall() <= 78) {
+         rand = rng.nextDouble(.350, .450);
+      } else if(r.getOverall() > 78 && r.getOverall() <= 80) {
+         rand = rng.nextDouble(.450, .550);
+      } else {
+         rand = rng.nextDouble(.550, .650);
+      }
+      int games = 100;
+      int wins = (int) Math.round(rand * games);
+      int losses = games - wins;
+      return ("The " + r.teamName + " record: " + wins + "-" + losses + ".");
    }
 }
