@@ -11,5 +11,12 @@ public class Main {
         Roster roster7 = new Roster("rapids.txt");
         Roster roster8 = new Roster("wolves.txt");
         System.out.println(roster1.getOverall());
+        System.out.println(roster2.getOverall());
+        System.out.println(roster3.getOverall());
+        System.out.println(roster4.getOverall());
+        System.out.println(roster5.getOverall());
+        System.out.println(roster6.getOverall());
+        System.out.println(roster7.getOverall());
+        System.out.println(roster8.getOverall());
     }
 }
