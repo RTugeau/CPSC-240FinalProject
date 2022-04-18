@@ -6,7 +6,9 @@ import java.util.Scanner;
 import java.util.Random;
 public class Roster {
    private ArrayList<Player> roster = new ArrayList<>();
-   public Roster (String fileName) {
+   private String teamName;
+   public Roster (String fileName, String teamName) {
+      this.teamName = teamName;
       Scanner scnr = new Scanner(System.in);
       try {
          scnr = new Scanner (new File(fileName));
@@ -47,9 +49,9 @@ public class Roster {
       }
       double gsim = rng.nextDouble();
       if(gsim >= rand) {
-         return ("Your team Lost the game.");
+         return ("The " + r.teamName + " Lost the game.");
       } else {
-         return ("Your team Won the game.");
+         return ("The " + r.teamName + " Won the game.");
       }
    }
 }
