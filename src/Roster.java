@@ -8,7 +8,7 @@ import java.lang.Math;
 public class Roster {
    private ArrayList<Player> roster = new ArrayList<>();
    private String teamName;
-   public Roster (String fileName, String teamName) {
+   public Roster (String fileName) {
       this.teamName = teamName;
       Scanner scnr = new Scanner(System.in);
       try {
