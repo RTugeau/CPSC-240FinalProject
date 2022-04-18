@@ -19,5 +19,6 @@ public class Main {
         System.out.println(roster7.getOverall());
         System.out.println(roster8.getOverall());
         System.out.println(roster1.gameSim(roster1));
+        System.out.println(roster5.seasonSim(roster5));
     }
 }
