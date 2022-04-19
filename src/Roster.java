@@ -1,15 +1,17 @@
 package src.src;
-import java.util.ArrayList;
+import java.util.*;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Scanner;
-import java.util.Random;
 import java.lang.Math;
+
 public class Roster {
-   private ArrayList<Player> roster = new ArrayList<>();
+   public static ArrayList<Player> roster = new ArrayList<>();
+   public static ArrayList<String> teamNames = new ArrayList<>();
+   public static ArrayList<Roster> rosterList = new ArrayList<>();
+   public static Map<String, ArrayList<Player>> rosterMap = new HashMap<>();
    private String teamName;
    public Roster (String fileName) {
-      this.teamName = teamName;
+      this.teamName = fileName.split("\\.")[0];
       Scanner scnr = new Scanner(System.in);
       try {
          scnr = new Scanner (new File(fileName));
@@ -25,9 +27,9 @@ public class Roster {
          double fieldingPct = Double.parseDouble(scnr.nextLine());
          roster.add(new Player(playerName, position, playerRating, battingAvg, fieldingPct));
       }
-      for (Player p:roster) {
-         System.out.println(p.getName());
-      }
+     // rosterList.add(roster);
+      rosterMap.put(teamName, roster);
+      teamNames.add(teamName);
    }
    public int getOverall() {
       int sum = 0;
