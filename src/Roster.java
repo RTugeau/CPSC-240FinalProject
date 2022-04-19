@@ -31,6 +31,25 @@ public class Roster {
       rosterMap.put(teamName, roster);
       teamNames.add(teamName);
    }
+
+   public double battingAvgCalc() {
+      double sum = 0.0;
+      for (Player s: roster) {
+         sum += s.getBattingAvg();
+      }
+      double teamBattingAvg = sum/(roster.size());
+      return teamBattingAvg;
+   }
+
+   public double fieldingPctCalc() {
+      double sum = 0.0;
+      for (Player s: roster) {
+         sum += s.getFieldingPct();
+      }
+      double teamFieldPct = sum/(roster.size());
+      return teamFieldPct;
+   }
+
    public int getOverall() {
       int sum = 0;
       for (Player s:roster) {
