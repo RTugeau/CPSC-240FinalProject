@@ -43,7 +43,7 @@ class ButtonListener implements ActionListener {
             Main.rosterFrame.add(new JLabel("Select the team you would like to trade with"), BorderLayout.NORTH);
             Main.rosterFrame.setVisible(true);
         } else if (currentFrame.getTitle().equals("Sim & Trade Window") && Main.gameSiming == true) {
-            Main.simOrTradeWindow.dispose();
+            //Main.simOrTradeWindow.dispose();
             Roster.gameSim(selectedTeam);
 
         } else if (currentFrame.getTitle().equals("Roster Frame") && Main.trading == true) {

@@ -1,60 +1,60 @@
 Billy McKinney
 1B
 70
-.192
-.996
+0.192
+0.996
 Jean Segura
 2B
 84
-.290
-.981
+0.29
+0.981
 Brian Anderson
 3B
 74
-.249
-.985
+0.249
+0.985
 Justin Turner
 3B
 80
-.278
-.961
+0.278
+0.961
 Fransisco Lindor
 SS
 81
-.230
-.978
+0.23
+0.978
 Carlos Correa
 SS
 84
-.279
-.981
+0.279
+0.981
 Elias Diaz
 C
 77
-.246
-.995
+0.246
+0.995
 Brad Miller
 LF
 72
-.227
-.975
+0.227
+0.975
 Lorenzo Cain
 CF
 78
-.257
-.994
+0.257
+0.994
 Jarred Kelenic
 CF
 69
-.181
-.983
+0.181
+0.983
 Jo Adell
 RF
 69
-.246
-1.000
+0.246
+1.0
 Charlie Blackmon
 RF
 77
-.270
-.991
+0.27
+0.991

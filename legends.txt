@@ -1,60 +1,60 @@
 Bobby Dalbec
 1B
 76
-.240
-.977
+0.24
+0.977
 Joey Votto
 1B
 85
-.266
-.993
+0.266
+0.993
 Kolten Wong
 2B
 83
-.272
-.995
+0.272
+0.995
 Jonathan India
 2B
 75
-.269
-.976
+0.269
+0.976
 Yoan Moncada
 3B
 74
-.263
-.953
+0.263
+0.953
 Wander Franco
 SS
 84
-.288
-.929
+0.288
+0.929
 Danny Jansen
 C
 76
-.223
-.996
+0.223
+0.996
 Jesse Winker
 LF
 81
-.305
-.994
+0.305
+0.994
 David Peralta
 LF
 73
-.259
-.989
+0.259
+0.989
 Byron Buxton
 CF
 89
-.306
-.994
+0.306
+0.994
 Mitch Haniger
 RF
 81
-.253
-.989
+0.253
+0.989
 Kyle Tucker
 RF
 89
-.294
-.941
+0.294
+0.941

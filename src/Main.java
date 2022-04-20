@@ -1,7 +1,8 @@
 package src.src;
 import javax.swing.*;
 import java.awt.*;
-import java.util.Locale;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 
 public class Main {
     public static JFrame rosterFrame = new JFrame("Roster Frame");
@@ -14,8 +15,7 @@ public class Main {
     public static boolean gameSiming = false;
     public static boolean seasonSiming = false;
     //public static JFrame currentFrame = new JFrame("Current JFrame");
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws FileNotFoundException {
         rosterFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         rosterFrame.getContentPane().setLayout(new BoxLayout(rosterFrame.getContentPane(), BoxLayout.Y_AXIS));
         rosterFrame.setSize(300, 300);
@@ -26,7 +26,6 @@ public class Main {
         seasonSim.setSize(300, 300);
         //seasonSim.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //seasonSim.getContentPane().setLayout(new BoxLayout(gameSim.getContentPane(), BoxLayout.Y_AXIS));
-
         Roster bears = new Roster("bears.txt");
         Roster defenders = new Roster("defenders.txt");
         Roster fusion = new Roster("fusion.txt");
@@ -50,6 +49,7 @@ public class Main {
         addButton("Game Simulator", simOrTradeWindow);
         addButton("Season Simulator", simOrTradeWindow);
     }
+
 
     public static void addButton(String text, JFrame f) {
         // add a button object

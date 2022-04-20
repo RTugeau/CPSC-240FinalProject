@@ -1,60 +1,60 @@
 Garrett Cooper
 1B
 75
-.284
-.992
+0.284
+0.992
 Anthony Rizzo
 1B
 81
-.248
-.995
+0.248
+0.995
 Marcus Semien
 2B
 87
-.265
-.985
+0.265
+0.985
 Yandy Diaz
 3B
 72
-.256
-.990
+0.256
+0.99
 Corey Seager
 SS
 82
-.306
-.975
+0.306
+0.975
 Willy Adames
 SS
 80
-.285
-.970
+0.285
+0.97
 Tom Murphy
 C
 73
-.202
-.990
+0.202
+0.99
 Joey Bart
 C
 70
-.333
-1.000
+0.333
+1.0
 Kris Bryant
 LF
 81
-.265
-.966
+0.265
+0.966
 Luis Robert
 CF
 90
-.338
-.976
+0.338
+0.976
 Kike Hernandez
 CF
 86
-.250
-.985
+0.25
+0.985
 Alex Dickerson
 RF
 72
-.233
-.982
+0.233
+0.982

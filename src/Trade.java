@@ -1,6 +1,7 @@
 package src.src;
 import javax.swing.*;
 import java.awt.*;
+import java.io.FileNotFoundException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.awt.event.*;
@@ -40,17 +41,17 @@ public class Trade {
         Main.tradeStatus = TradeStatus.NO_TEAM_SELECTED;
     }
     public static void tradePlayer(String player1, String player2, JButton playerButton1, JButton playerButton2) {
-        Set<String> keySet = Roster.rosterMap.keySet();
+        //Set<String> keySet = Roster.rosterMap.keySet();
         for (Player s: (Roster.rosterMap.get(tradingTeam1))) {
             for (Player f: (Roster.rosterMap.get(tradingTeam2))) {
                 if (s.getName().equals(player1) && f.getName().equals(player2)) {
                     System.out.println(s.getName()+" "+f.getName());
                     Player copy_s = new Player(s);
                     Player copy_f = new Player(f);
-
-                    s = copy_f;
-                    f = copy_s;
-
+                    int player1Index = Roster.rosterMap.get(tradingTeam1).indexOf(s);
+                    int player2Index = Roster.rosterMap.get(tradingTeam2).indexOf(f);
+                    Roster.rosterMap.get(tradingTeam1).set(player1Index, f);
+                    Roster.rosterMap.get(tradingTeam2).set(player2Index, s);
                     System.out.println(s.getName()+" "+f.getName());
                 }
             }
@@ -58,5 +59,6 @@ public class Trade {
         tradeWindow.setVisible(false);
         Main.rosterFrame.setVisible(true);
         Main.trading = false;
+        Roster.fileWriter();
     }
 }

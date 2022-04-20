@@ -1,60 +1,60 @@
 Rowdy Tellez
 1B
 78
-.272
-.988
+0.272
+0.988
 Cesar Hernandez
 2B
 77
-.232
-.976
+0.232
+0.976
 Alex Bregman
 3B
 82
-.270
-.964
+0.27
+0.964
 Dansby Swanson
 SS
 83
-.248
-.982
+0.248
+0.982
 Brandon Crawford
 SS
 85
-.298
-.983
+0.298
+0.983
 Robinson Chirinos
 C
 71
-.227
-.995
+0.227
+0.995
 Tucker Barnhart
 C
 75
-.247
-.999
+0.247
+0.999
 Jurickson Profar
 LF
 69
-.227
-.967
+0.227
+0.967
 Alex Kiriloff
 LF
 74
-.251
-.991
+0.251
+0.991
 Michael Taylor
 CF
 77
-.244
-.992
+0.244
+0.992
 Randal Grichuk
 CF
 78
-.241
-1.000
+0.241
+1.0
 Kole Calhoun
 RF
 75
-.235
-.972
+0.235
+0.972

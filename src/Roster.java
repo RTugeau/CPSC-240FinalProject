@@ -4,6 +4,7 @@ import java.awt.*;
 import java.util.*;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.lang.Math;
 
 public class Roster {
@@ -129,6 +130,25 @@ public class Roster {
       Main.seasonSim.add(grid);
       Main.seasonSim.setVisible(true);
       Main.seasonSiming = false;
-
+   }
+   public static void fileWriter() {
+      // PrintWriter pw = new PrintWriter()
+     // PrintWriter pw = new PrintWriter("");
+      for (String s : teamNames) {
+         PrintWriter pw = null;
+         try {
+            pw = new PrintWriter(s + ".txt");
+         } catch (FileNotFoundException e) {
+            e.printStackTrace();
+         }
+         for (Player f : (Roster.rosterMap.get(s))) {
+            pw.println(f.getName());
+            pw.println(f.getPosition());
+            pw.println(f.getPlayerRating());
+            pw.println(f.getBattingAvg());
+            pw.println(f.getFieldingPct());
+         }
+         pw.close();
+      }
    }
 }
