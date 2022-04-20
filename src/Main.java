@@ -1,18 +1,31 @@
 package src.src;
 import javax.swing.*;
 import java.awt.*;
+import java.util.Locale;
 
 public class Main {
     public static JFrame rosterFrame = new JFrame("Roster Frame");
     public static JFrame simOrTradeWindow = new JFrame("Sim & Trade Window");
     public static JFrame tradeWindow = new JFrame("Trade Window");
+    public static JFrame gameSim = new JFrame("Game Simulator");
+    public static JFrame seasonSim = new JFrame("Season Simulator");
     public static Enum tradeStatus = TradeStatus.NO_TEAM_SELECTED;
     public static boolean trading = false;
+    public static boolean gameSiming = false;
+    public static boolean seasonSiming = false;
     //public static JFrame currentFrame = new JFrame("Current JFrame");
     public static void main(String[] args) {
 
         rosterFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         rosterFrame.getContentPane().setLayout(new BoxLayout(rosterFrame.getContentPane(), BoxLayout.Y_AXIS));
+        rosterFrame.setSize(300, 300);
+        simOrTradeWindow.setSize(600, 600);
+        tradeWindow.setSize(300, 300);
+        gameSim.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        gameSim.getContentPane().setLayout(new BoxLayout(gameSim.getContentPane(), BoxLayout.Y_AXIS));
+        seasonSim.setSize(300, 300);
+        //seasonSim.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //seasonSim.getContentPane().setLayout(new BoxLayout(gameSim.getContentPane(), BoxLayout.Y_AXIS));
 
         Roster bears = new Roster("bears.txt");
         Roster defenders = new Roster("defenders.txt");
@@ -35,8 +48,7 @@ public class Main {
         rosterFrame.setVisible(true);
         addButton("Trade", simOrTradeWindow);
         addButton("Game Simulator", simOrTradeWindow);
-        System.out.println(bears.getOverall());
-
+        addButton("Season Simulator", simOrTradeWindow);
     }
 
     public static void addButton(String text, JFrame f) {
@@ -48,12 +60,29 @@ public class Main {
 
     public static void simOrTradeWindow(String rosterName) {
         rosterFrame.setVisible(false);
+        rosterName = rosterName.toLowerCase();
         //make the program close when the window closes
         simOrTradeWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // create the box layout
         simOrTradeWindow.getContentPane().setLayout(new BoxLayout(simOrTradeWindow.getContentPane(), BoxLayout.Y_AXIS));
-        addButton("Trade", simOrTradeWindow);
-        addButton("Game Simulator", simOrTradeWindow);
+        JPanel grid = new JPanel();
+        grid.setLayout(new GridLayout(12, 1));
+
+        JPanel statGrid = new JPanel();
+        statGrid.setLayout(new GridLayout());
+        String f = ("POS"+" NAME "+" AVG "+" FPT "+" OVR");
+        String playerSt = String.format(f);
+        JTextField text = new JTextField(playerSt);
+        statGrid.add(text);
+        for (Player s: (Roster.rosterMap.get(rosterName))) {
+            String player = (s.getPosition()+" "+s.getName()+" "+s.getBattingAvg()+" "+s.getFieldingPct()+" "+s.getPlayerRating());
+            //String formatted = String.format("-%20", player);
+            JTextField playerStats = new JTextField(player);
+            //playerStats.addActionListener(new ButtonListener(s.getName(), Main.tradeWindow));
+            grid.add(playerStats);
+        }
+        simOrTradeWindow.add(statGrid);
+        simOrTradeWindow.add(grid);
         simOrTradeWindow.pack();
         simOrTradeWindow.setVisible(true);
     }

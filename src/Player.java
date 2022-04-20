@@ -6,7 +6,15 @@ public class Player {
     private int playerRating;
     private double battingAvg;
     private double fieldingPct;
+    private Player player;
 
+    public Player(Player s) {
+        this.name = s.getName();
+        this.position = s.getPosition();
+        this.playerRating = s.getPlayerRating();
+        this.battingAvg = s.getBattingAvg();
+        this.fieldingPct = s.getFieldingPct();
+    }
     public Player(String name, String position, int playerRating, double battingAvg, double fieldingPct) {
         this.name = name;
         this.position = position;
