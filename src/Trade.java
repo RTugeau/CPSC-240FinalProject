@@ -1,18 +1,29 @@
 package src.src;
 import javax.swing.*;
 import java.awt.*;
-import java.io.FileNotFoundException;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.awt.event.*;
-import java.util.Set;
 
+/**
+ * This classes function is to incorporate the GUI and take a player object
+ * from one team and a player object from another and properly switch them
+ * between each text file
+ */
 public class Trade {
+    /**
+     * variables set for switching the player and form
+     * the GUI interface
+     */
     public static JFrame tradeWindow = new JFrame("Trade Window");
     public static String tradingTeam1;
     public static String tradingTeam2;
     public static String tradingPlayer1;
     public static String tradingPlayer2;
+
+    /**
+     * GUI to display both rosters that you picked.
+     * Allows you to select one player from each team
+     * @param team1
+     * @param team2
+     */
     public static void tradeWindow(String team1, String team2) {
         tradeWindow.setSize(600, 600);
         JPanel bigGrid = new JPanel();
@@ -40,6 +51,15 @@ public class Trade {
         tradeWindow.setVisible(true);
         Main.tradeStatus = TradeStatus.NO_TEAM_SELECTED;
     }
+
+    /**
+     * takes each Player that is selected and switches them both on each file
+     * and saves the changes.
+     * @param player1
+     * @param player2
+     * @param playerButton1
+     * @param playerButton2
+     */
     public static void tradePlayer(String player1, String player2, JButton playerButton1, JButton playerButton2) {
         //Set<String> keySet = Roster.rosterMap.keySet();
         for (Player s: (Roster.rosterMap.get(tradingTeam1))) {

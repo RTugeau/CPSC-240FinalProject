@@ -7,18 +7,25 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.lang.Math;
 
+/**
+ * this class Roster Class uses the players to save, calculated and make changes
+ * based on the called method
+ */
 public class Roster {
+   /**
+    * set up the variables and arrayLists
+    */
    private ArrayList<Player> roster = new ArrayList<>();
    public static ArrayList<String> teamNames = new ArrayList<>();
    public static ArrayList<Roster> rosterList = new ArrayList<>();
    public static Map<String, ArrayList<Player>> rosterMap = new HashMap<>();
    private String teamName;
 
-   public Roster(ArrayList<Player> r) {
-      for (Player s: r) {
-
-      }
-   }
+   /**
+    * this takes in the file and scans by each line for the
+    * text file to be used, then sets to roster map
+    * @param fileName
+    */
    public Roster (String fileName) {
       this.teamName = fileName.split("\\.")[0];
       Scanner scnr = new Scanner(System.in);
@@ -41,6 +48,10 @@ public class Roster {
       teamNames.add(teamName);
    }
 
+   /**
+    * calculates the batting avg of the team
+    * @return
+    */
    public double battingAvgCalc() {
       double sum = 0.0;
       for (Player s: roster) {
@@ -50,6 +61,10 @@ public class Roster {
       return teamBattingAvg;
    }
 
+   /**
+    * calculates the fielding percentage of the team
+    * @return
+    */
    public double fieldingPctCalc() {
       double sum = 0.0;
       for (Player s: roster) {
@@ -59,6 +74,10 @@ public class Roster {
       return teamFieldPct;
    }
 
+   /**
+    * calculates the overall of the team
+    * @return
+    */
    public int getOverall() {
       int sum = 0;
       for (Player s:roster) {
@@ -67,6 +86,12 @@ public class Roster {
       int teamOverall = sum/(roster.size());
       return(teamOverall);
    }
+
+   /**
+    * calculates the overall of the team to incorporate in the GUI
+    * @param rosterName
+    * @return
+    */
    public static int getOverall2(String rosterName) {
       int teamOverall = 0;
       int sum = 0;
@@ -77,6 +102,11 @@ public class Roster {
       return(teamOverall);
    }
 
+   /**
+    * this method uses the overall of the team to predict
+    * your possibility of winning a game
+    * @param teamName
+    */
    public static void gameSim(String teamName) {
      // Main.rosterFrame.setVisible(false);
       JPanel grid = new JPanel();
@@ -106,6 +136,12 @@ public class Roster {
       Main.gameSim.setVisible(true);
    }
 
+   /**
+    * this method takes the overall as well of the team
+    * and makes a random prediction and calculation
+    * of your predicted record for that season
+    * @param teamName
+    */
    public static void seasonSim(String teamName) {
       Main.simOrTradeWindow.setVisible(false);
       JPanel grid = new JPanel();
@@ -131,9 +167,12 @@ public class Roster {
       Main.seasonSim.setVisible(true);
       Main.seasonSiming = false;
    }
+
+   /**
+    * File Writer to update the text files
+    * after a trade is made
+    */
    public static void fileWriter() {
-      // PrintWriter pw = new PrintWriter()
-     // PrintWriter pw = new PrintWriter("");
       for (String s : teamNames) {
          PrintWriter pw = null;
          try {
