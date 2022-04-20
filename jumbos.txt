@@ -23,11 +23,11 @@ C
 78
 0.237
 0.993
-Max Stassi
-C
-78
-0.241
-0.994
+Nolan Arenado
+3B
+89
+0.255
+0.974
 Michael Brantley
 LF
 79
@@ -43,10 +43,10 @@ CF
 77
 0.252
 0.951
-Mike Trout
-CF
-96
-0.333
+Jo Adell
+RF
+69
+0.246
 1.0
 Teoscar Hernandez
 RF

@@ -14,6 +14,7 @@ public class Trade {
     public static String tradingPlayer1;
     public static String tradingPlayer2;
     public static void tradeWindow(String team1, String team2) {
+
         tradeWindow.setSize(600, 600);
         JPanel bigGrid = new JPanel();
         bigGrid.setLayout(new GridLayout(1, 2));

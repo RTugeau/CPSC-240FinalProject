@@ -5,6 +5,10 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
 public class Main {
+    /**
+     * creates all the windows and team rosters. Team roster makes Player object based on every 5 lines in this order:
+     * Name, position, overall, batting percentage, fielding percentage
+     */
     public static JFrame rosterFrame = new JFrame("Roster Frame");
     public static JFrame simOrTradeWindow = new JFrame("Sim & Trade Window");
     public static JFrame tradeWindow = new JFrame("Trade Window");
@@ -50,7 +54,11 @@ public class Main {
         addButton("Season Simulator", simOrTradeWindow);
     }
 
-
+    /**
+     * adds button by invoking ButtonListener. Able to be used by all frames
+     * @param text
+     * @param f
+     */
     public static void addButton(String text, JFrame f) {
         // add a button object
         JButton button = new JButton(text);
@@ -58,6 +66,10 @@ public class Main {
         f.getContentPane().add(button);
     }
 
+    /**
+     * displays Simulation & Trading Window, as well as all player stats of selected team
+     * @param rosterName
+     */
     public static void simOrTradeWindow(String rosterName) {
         rosterFrame.setVisible(false);
         rosterName = rosterName.toLowerCase();
@@ -76,9 +88,7 @@ public class Main {
         statGrid.add(text);
         for (Player s: (Roster.rosterMap.get(rosterName))) {
             String player = (s.getPosition()+" "+s.getName()+" "+s.getBattingAvg()+" "+s.getFieldingPct()+" "+s.getPlayerRating());
-            //String formatted = String.format("-%20", player);
             JTextField playerStats = new JTextField(player);
-            //playerStats.addActionListener(new ButtonListener(s.getName(), Main.tradeWindow));
             grid.add(playerStats);
         }
         simOrTradeWindow.add(statGrid);

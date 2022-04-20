@@ -1,8 +1,8 @@
-Rowdy Tellez
+Ty France
 1B
 78
-0.272
-0.988
+0.291
+0.942
 Cesar Hernandez
 2B
 77
@@ -23,11 +23,11 @@ SS
 85
 0.298
 0.983
-Robinson Chirinos
-C
-71
-0.227
-0.995
+David Fletcher
+2B
+79
+0.262
+0.981
 Tucker Barnhart
 C
 75

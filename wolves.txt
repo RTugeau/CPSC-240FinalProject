@@ -48,10 +48,10 @@ CF
 69
 0.181
 0.983
-Jo Adell
-RF
-69
-0.246
+Mike Trout
+CF
+96
+0.333
 1.0
 Charlie Blackmon
 RF

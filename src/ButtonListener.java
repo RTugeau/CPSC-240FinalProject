@@ -26,8 +26,14 @@ class ButtonListener implements ActionListener {
         currentFrame = f;
     }
     @Override
+    /**once a button is pressed,
+     *  if-else chain determines the current frame the button is in and what button was pressed
+     *
+     */
     public void actionPerformed(ActionEvent e) {
-        JOptionPane.showMessageDialog(null, "You pushed button " + buttonName);
+        /**
+         * keeps track of whether the season simulator, game simulator, or trade feature is running
+         */
         if (buttonName == "Trade") {
             Main.trading = true;
         } else if (buttonName == "Game Simulator") {
@@ -43,7 +49,6 @@ class ButtonListener implements ActionListener {
             Main.rosterFrame.add(new JLabel("Select the team you would like to trade with"), BorderLayout.NORTH);
             Main.rosterFrame.setVisible(true);
         } else if (currentFrame.getTitle().equals("Sim & Trade Window") && Main.gameSiming == true) {
-            //Main.simOrTradeWindow.dispose();
             Roster.gameSim(selectedTeam);
 
         } else if (currentFrame.getTitle().equals("Roster Frame") && Main.trading == true) {

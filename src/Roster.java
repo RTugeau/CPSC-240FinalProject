@@ -13,12 +13,7 @@ public class Roster {
    public static ArrayList<Roster> rosterList = new ArrayList<>();
    public static Map<String, ArrayList<Player>> rosterMap = new HashMap<>();
    private String teamName;
-
-   public Roster(ArrayList<Player> r) {
-      for (Player s: r) {
-
-      }
-   }
+   
    public Roster (String fileName) {
       this.teamName = fileName.split("\\.")[0];
       Scanner scnr = new Scanner(System.in);
